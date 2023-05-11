@@ -1,0 +1,291 @@
+body {
+  font-family: "Urbanist", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover {
+  color: currentColor;
+}
+
+h3 {
+  font-family: "Urbanist";
+}
+h4 {
+  font-family: sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: whitesmoke;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+  display: flex;
+  align-items: center;
+}
+
+header .container-fluid {
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  header .container-fluid {
+    padding: 0 5%;
+  }
+}
+#main_head {
+  font-size: 12vh;
+}
+@media (max-width: 420px) {
+  #main_head {
+    font-size: 10vh;
+  }
+}
+
+header .navb-logo img {
+  width: 150px;
+  height: 100px;
+}
+
+header .navb-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: black;
+}
+
+header .item {
+  text-align: center;
+  color: black;
+  font-size: larger;
+  padding: 0px 40px;
+  margin: 0px 10px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "IBM Plex Serif", serif;
+}
+header .item:hover {
+  background-color: #1f8a70;
+  color: white;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: #fefefe;
+  transition: all 0.1s ease;
+}
+
+header .item a {
+  text-decoration: none;
+}
+
+header .mobile-toggler {
+  font-size: 30px;
+}
+
+/* modal */
+
+.modal-dialog {
+  margin: 0;
+}
+
+.modal-content {
+  border-radius: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4.2px);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  padding: 0 5%;
+}
+
+.modal-header img {
+  width: 150px;
+  height: 100px;
+}
+
+.modal-header .btn-close {
+  background: transparent;
+  opacity: 1;
+}
+
+.modal-header i {
+  color: black;
+  font-size: 30px;
+}
+
+.modal-body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 75px 0 0 0;
+  flex: unset;
+}
+
+.modal-body .modal-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 7px 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  color: #274d8a;
+  border-bottom: 1px solid #274d8a;
+}
+
+.modal-body .modal-line:hover {
+  color: black;
+  border-bottom: 1px solid #fefefe;
+}
+
+.modal-line a {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: black;
+}
+
+.modal-line i {
+  color: currentColor;
+  font-size: 30px;
+  width: 35px;
+  margin-right: 15px;
+  padding: 0 0 3px 3px;
+}
+
+.mobile-modal-footer {
+  width: 87%;
+  margin: 0 auto;
+  padding: 20% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  color: #274d8a;
+}
+
+.mobile-modal-footer i:hover {
+  color: #fefefe;
+}
+
+#backgroundd {
+  background-image: url("../assest/Final1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes animate {
+  0% {
+    background-image: url("../assest/Final1.jpg");
+  }
+  20% {
+    background-image: url("../assest/Final2.png");
+  }
+  40% {
+    background-image: url("../assest/Final3.jpg");
+  }
+  80% {
+    background-image: url("../assest/Final4.png");
+  }
+  100% {
+    background-image: url("../assest/Final5.png");
+  }
+}
+
+.display_img {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.display_img:hover {
+  transform: scale(1.07);
+}
+
+.check-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.check-list li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.check-list li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 5px;
+  height: 11px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #00a8a8;
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+}
+
+/* Boilerplate stuff */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.process-section {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.process-div {
+  margin: auto;
+}
+
+.feedback {
+  background-color: #31b0d5;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#mybutton {
+  position: fixed;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  bottom: -4px;
+  right: 10px;
+}
